@@ -38,13 +38,11 @@ RUN apt-get update && apt-get install -y \
 # RUN pecl install imagick \
 #   && docker-php-ext-enable imagick
 
-# xdebug
-RUN pecl install xdebug-3.1.5 && \
-    docker-php-ext-enable xdebug
-
 # modRewriteを有効化する
 RUN mv /etc/apache2/mods-available/rewrite.load /etc/apache2/mods-enabled
 RUN /bin/sh -c a2enmod rewrite
+
+RUN docker-php-ext-install opcache
 
 # タイムゾーン設定
 RUN ln -sf  /usr/share/zoneinfo/Asia/Tokyo /etc/localtime

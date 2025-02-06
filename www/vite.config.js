@@ -9,6 +9,9 @@ export default defineConfig({
             host: 'localhost',
         },
     }, 
+    build: {
+        minify: true
+    },
     plugins: [
         laravel({
             publicDirectory: 'html', // public(デフォルト) から htmlに変更

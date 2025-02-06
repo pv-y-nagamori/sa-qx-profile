@@ -4,6 +4,8 @@ node_modules
 www/html/build
 www/html/hot
 www/html/storage
+www/html/ssr
+www/bootstrap/ssr
 storage/*.key
 vendor
 .env
