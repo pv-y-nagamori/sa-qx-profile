@@ -54,6 +54,8 @@ DBユーザー周りは、適宜ymlと一緒に変更
 ## 5:laravel設定周り
 ```bash
 
+chmod -R 777 storage bootstrap/cache
+
 composer install
 
 php artisan config:cache
